@@ -1,0 +1,34 @@
+﻿Question 1 is mandatory. 
+
+
+Out of other questions you have to answer 2, so choose wisely. 
+All problems other than [1] will require you to code, so code well. 
+We expect you to provide gists in github or a github project - which compiles and runs. 
+
+
+
+
+1. Mandatory : Elaborate how you tested your internship or academic projects. 
+a. What did the system used to do? 
+b. What other systems have you seen in the wild like that? 
+c. How do you approach the testing problem? 
+d. What were interesting bugs? 
+e. How did you fix them?
+
+
+Ans 1 :- I was an Intern at Adani Wilmar and there I use to test My project based on Flask , Flutter and MongoDB. There were Three stages to test the app :- 
+ 1 On Local machine :- the Flask API is having two endpoints one to authenticate the SKU and other to detect and send report if the image is having adani product in it , this was running on local host on my system The steps i will followed to test : 
+1. Using postman , I will send the images in which the SKU is are there test if the response is correct or not. Same goes for the other end point as well.
+2.  Using BurpSuit , I will check if the request is going with encryption so that its safe and no one can do any malicious activities  with it.
+3. Using the Application, I will check if the backend is working with requests sended by the other applications also i will try to send some unwanted data and check if the server is giving me error or getting crashed.
+2. On Dummy server :- I will host the application on small testing platform like Render and Heroku and check all the end point are working properly or not in the same why as i did on my local system 
+
+
+3 On Multiple devices :- I will give that app to the few end users which are working in the company and tell them to use it if any error  or any exceptional case arrises I will get to know. If no exceptions are found i will send the server and app to Production.
+
+
+Some Interesting bugs that i faced:-
+1. In the Flutter app i faced a bug for multiple images :- users where able to send multiple requests at the same time which can lead to data duplication. Fixed : The user has to capture the image and if its from the device folder the user can only select one pic the user will get a toast message that the report was sent.
+
+
+2. In the Flask API :- The server was taking to much time to send the image to the neural network and detect the objects. Fixed :- we used smaller neural network like YOLOv5 lite and speed up the process with preloading the requirement files so that it wont load the  library again and again.
